@@ -10,6 +10,43 @@
   <body>
     <div class="container-fluid">
       <h1 class="display-1"><em>Bank Account App</em></h1>
+      <form id="nameGroup">
+        <div class="form-group">
+          <p>Make an Account</p>
+         <label for="nameInput">Name:</label>
+         <input type="text" class="form-control" id="nameInput" placeholder="Enter name:">
+         <label for="initialDeposit">Initial Deposit:</label>
+         <input type="text" class="form-control" id="depoInput" placeholder="Put in an amount">
+         <br>
+         <button type="submit" class="btn btn-info" id="addName">Submit</button>
+        </div>
+      </form>
+        <div class="accountInfo">
+          <h2 class="display-4">Welcome to your account</h2>
+            <legend>Enter deposits and withdrawals here:</legend>
+<!-- deposit group -->
+          <form>
+          <div class="form-group">
+            <label for="nameInput">Deposit</label>
+            <input type="text" class="form-control" id="depositInput" placeholder="Enter deposit amount:">
+            <br>
+            <button type="button" class="btn btn-info" id="depositSubmit">Submit</button>
+          </div>
+          </form>
+<!-- withdrawal group -->
+          <form>
+          <div class="form-group">
+            <label for="withdrawalInput">Withdrawal</label>
+            <input type="text" class="form-control" id="withdrawalInput" placeholder="Enter withdrawal amount:">
+            <br>
+            <button type="button" class="btn btn-info" id="withdrawalSubmit">Submit</button>
+          </div>
+          </form>
+
+          <div class="balanceAmount">
+            <p>Your balance is: <strong><span id="balance"></span></strong>.</p>
+          </div>
+        </div>
 
 
 
