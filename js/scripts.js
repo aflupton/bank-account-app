@@ -14,10 +14,15 @@ BankAccount.prototype.withdrawal = function(num){
 var newAccount;
 
 $(document).ready(function( ) {
-
+  // hide second form on page load
+  $(".accountInfo").hide();
 
   $("form#nameGroup").submit(function(event) {
     event.preventDefault();
+    // show second form on first submit
+    $(".accountInfo").show();
+  
+
 
     var nameInput = $("#nameInput").val();
     var initialDeposit = parseFloat($("#depoInput").val());
@@ -26,6 +31,8 @@ $(document).ready(function( ) {
     console.log(newAccount);
 
     $("#balance").text(newAccount.balance)
+    $("#name").text(newAccount.userName)
+    $("#nameGroup").hide();
 
   });
 
@@ -43,5 +50,7 @@ $(document).ready(function( ) {
     newAccount.withdrawal(withdrawalInput);
     console.log(newAccount);
     $("#balance").text(newAccount.balance)
+
+
   });
 });
